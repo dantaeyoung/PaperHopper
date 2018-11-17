@@ -33,7 +33,7 @@ Steps:
   - Download this repo. Everything for PaperHopper is in the `PaperHopper/` subfolder.
   - In the `reacTIVision-1.5.1-win64/` folder, run `reacTIVision.exe`. You should see a screen pop up, showing a processed black-and-white view of the webcam.
     - (This is the same code from `http://reactivision.sourceforge.net/`, just with some settings pre-tweaked for convenience.)
-    - Print out a sheet of fiducial markers from `http://reactivision.sourceforge.net/data/fiducials.pdf`, or load it on your phone, and test to see if Reactivision recognizes it. You should see small green numbers in the middle of each markers if so.
+    - Print out a sheet of fiducial markers from (http://reactivision.sourceforge.net/data/fiducials.pdf), or load it on your phone, and test to see if Reactivision recognizes it. You should see small green numbers in the middle of each markers if so.
 
 
 
