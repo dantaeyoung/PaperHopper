@@ -1,7 +1,4 @@
-# Dynamichopper
-# DynamicHopper
 # PaperHopper
-# Paperhopper
 
 ### Documentation
 
