@@ -2,7 +2,7 @@
 
 PaperHopper is a prototype medium for experimenting with how our environment changes how we design.
 
-Initially developed with _Metatool_, a class taught at Columbia GSAPP in Fall 2018. 
+Initially developed with _Metatool_, a class taught at Columbia GSAPP in Fall 2018. Students are asked to brainstorm and create experimental environments that altered their design process.
 
 Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
