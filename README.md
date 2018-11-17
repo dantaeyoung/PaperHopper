@@ -1,4 +1,7 @@
-# GrassySpace
+# Dynamichopper
+# DynamicHopper
+# PaperHopper
+# Paperhopper
 
 ### Documentation
 
