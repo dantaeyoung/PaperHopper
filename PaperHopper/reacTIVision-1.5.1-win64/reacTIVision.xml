@@ -4,7 +4,7 @@
     <fiducial amoeba="default" yamaarashi="false" mirror="false" />
     <filter fiducial="true" finger="false" blob="false" />
     <finger size="0" sensitivity="75" />
-    <image display="src" equalize="false" fullscreen="false" />
-    <threshold gradient="32" tile="10" threads="max" />
+    <image display="dest" equalize="false" fullscreen="false" />
+    <threshold gradient="32" tile="10" threads="2" />
     <calibration file="default.grid" invert=" " />
 </reactivision>
