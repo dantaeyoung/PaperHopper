@@ -53,9 +53,9 @@ Required hardware:
     - [Lunchbox](https://www.food4rhino.com/app/lunchbox)
     - [Telepathy](https://www.food4rhino.com/app/telepathy)
 - Follow the instructions in the Grasshopper definition.
-  - ![CameraOnlyInstructions.PNG](PaperHopper/imgs/CameraOnlyInstructions.PNG)
+![CameraOnlyInstructions.PNG](PaperHopper/imgs/CameraOnlyInstructions.PNG)
   - Especially - make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
-  - ![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
+![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
 - You should now have it working! This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
 
 
