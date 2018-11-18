@@ -8,11 +8,12 @@ Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
 Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between tool and medium. It is also very much a prototype.
 
+**Download [v0.1](https://github.com/dantaeyoung/PaperHopper/archive/v0.1.zip) as a zip file.**
+
 ## Setup
 
 ### Hardware
 
-(More details to come)
 
 Required hardware:
 - A table with a light-ish surface. The maximum size will depend on the projector throw distance and the webcam angle of view.
@@ -24,6 +25,9 @@ Required hardware:
   - The more lumens, the better. Having a throw ratio of around 0.5 - 1.2 is necessary to get a wide image with a short distance.
 - A fast computer with good CPU clock speed. 
   - Grasshopper works on the CPU, and is mostly single-threaded.
+(More details to come)
+
+
 
 ### Software setup for Camera-only mode.
 
@@ -51,6 +55,8 @@ Required hardware:
   - Especially - make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
   - ![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
 - You should now have it working! This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
+
+
 
 ### Software setup for Full table mode.
 
