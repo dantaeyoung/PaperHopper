@@ -40,3 +40,13 @@ Required hardware:
   - Great!
 
 ##### Grasshopper/Rhino
+
+- Launch Rhino (6) and Grasshopper.
+- Load `Paperhopper_CameraOnly_TEMPLATE.gh` in Grasshopper.
+  - If Grasshopper warns you about missing plugins, the relevant plugins are in the folder `gh_plugins/`. They are:
+    - [Human](https://www.food4rhino.com/app/human)
+    - [gHowl](https://www.food4rhino.com/app/ghowl)
+    - [Bengesht](https://www.food4rhino.com/app/bengesht)
+    - [Lunchbox](https://www.food4rhino.com/app/lunchbox)
+    - [Telepathy](https://www.food4rhino.com/app/telepathy)
+- Follow the instructions in the Grasshopper definition.
