@@ -49,3 +49,5 @@ Required hardware:
     - [Telepathy](https://www.food4rhino.com/app/telepathy)
 - Follow the instructions in the Grasshopper definition.
   - Especially - make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
+  ![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
+
