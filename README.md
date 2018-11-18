@@ -8,11 +8,12 @@ Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
 Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between tool and medium. It is also very much a prototype.
 
+**[Download v0.1 as a zip file.](https://github.com/dantaeyoung/PaperHopper/archive/v0.1.zip)**
+
 ## Setup
 
 ### Hardware
 
-(More details to come)
 
 Required hardware:
 - A table with a light-ish surface. The maximum size will depend on the projector throw distance and the webcam angle of view.
@@ -24,6 +25,9 @@ Required hardware:
   - The more lumens, the better. Having a throw ratio of around 0.5 - 1.2 is necessary to get a wide image with a short distance.
 - A fast computer with good CPU clock speed. 
   - Grasshopper works on the CPU, and is mostly single-threaded.
+(More details to come)
+
+
 
 ### Software setup for Camera-only mode.
 
@@ -49,3 +53,24 @@ Required hardware:
     - [Telepathy](https://www.food4rhino.com/app/telepathy)
 - Follow the instructions in the Grasshopper definition.
   - Especially - make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
+  - ![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
+- You should now have it working! This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
+
+
+
+### Software setup for Full table mode.
+
+ The setup is similar to above. In addition:
+##### Hardware: 
+ - Install a projector
+##### Rhino:
+ - Open the `Paperhopper_3dm_TEMPLATE.3dm` file in Rhino.
+ - In `Display Options`, import the `Paperhopper_Display_Mode.ini` file, which just creates a viewport style called 'PaperHopper'. The background is black, and some other small details are tweaked.
+ - Load the Named View `PaperHopper` view.
+ - Run `ToggleFloatingViewport` to make sure that a floating viewport exists. 
+ - Drag this to your projector and maximize it, effectively using this as a canvas.
+##### Grasshopper:
+ - First open the `Paperhopper_1_CALIBRATION.gh` file in Grasshopper. This will help you calibrate the system. Follow the instructions (essentially press the large pink button and move a single fiducial marker around).
+ - When your calibration is done, Grasshopper saves a `Calibration.csv` file locally to the same folder.
+ - Close this definition. Now, open `Paperhopper_2_PLAY_TEMPLATE.gh`.
+ - You will see the same 'Find Tags based on Tags ID' component as before, but will also be able to see the system recognize the tags and project them onto the table surface.
