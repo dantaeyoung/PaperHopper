@@ -8,7 +8,7 @@ Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
 Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between tool and medium. It is also very much a prototype.
 
-**[Download v0.1 as a zip file.](https://github.com/dantaeyoung/PaperHopper/archive/v0.1.zip)**
+**[Download v0.2 as a zip file.](https://github.com/dantaeyoung/PaperHopper/archive/v0.2.zip)**
 
 ## Setup
 
