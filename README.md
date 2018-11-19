@@ -39,6 +39,7 @@ Required hardware:
     - (This is the same code from `http://reactivision.sourceforge.net/`, just with some settings pre-tweaked for convenience.)
   - If Windows alerts you that reactivision wants to communicate over the network, let it do so.
   - Print out a sheet of fiducial markers from (http://reactivision.sourceforge.net/data/fiducials.pdf), or load it on your phone, and test to see if Reactivision recognizes it. You should see small green numbers in the middle of each markers if so.
+![reactivision.png](PaperHopper/imgs/reactivision.png)
   - Great!
 
 ##### Grasshopper/Rhino
@@ -52,8 +53,9 @@ Required hardware:
     - [Lunchbox](https://www.food4rhino.com/app/lunchbox)
     - [Telepathy](https://www.food4rhino.com/app/telepathy)
 - Follow the instructions in the Grasshopper definition.
+![CameraOnlyInstructions.PNG](PaperHopper/imgs/CameraOnlyInstructions.PNG)
   - Especially - make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
-  - ![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
+![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
 - You should now have it working! This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
 
 
