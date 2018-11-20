@@ -28,7 +28,7 @@ class Object_To_Find:
                 if m.distance < 0.7*n.distance:
                     good.append(m)
 
-        MIN_MATCH_COUNT = 20
+        MIN_MATCH_COUNT = 10
 
         if len(good) > MIN_MATCH_COUNT:
             src_pts = np.float32([ self.kp[m.queryIdx].pt for m in good ]).reshape(-1,1,2)
