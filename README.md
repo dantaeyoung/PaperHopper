@@ -35,7 +35,7 @@ Required hardware:
     - (This is the same code from `http://reactivision.sourceforge.net/`, just with some settings pre-tweaked for convenience.)
   - If Windows alerts you that reactivision wants to communicate over the network, let it do so.
   - Print out a sheet of fiducial markers from (http://reactivision.sourceforge.net/data/fiducials.pdf), or load it on your phone, and test to see if Reactivision recognizes it. You should see small green numbers in the middle of each markers if so.
-![reactivision.png](PaperHopper/imgs/reactivision.png)
+![reactivision.png](PaperHopper/imgs/reactivision.PNG)
   - Great!
 
 #### Grasshopper/Rhino
