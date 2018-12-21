@@ -20,8 +20,8 @@ Required hardware:
   - The webcam may need some modification to make it into an infrared webcam.
 - Projector. 
   - The more lumens, the better. Having a throw ratio of around 0.5 - 1.2 is necessary to get a wide image with a short distance.
-- A fast computer with good CPU clock speed. 
-  - Grasshopper works on the CPU, and is mostly single-threaded.
+- A fast computer with very good CPU clock speed. 
+  - This is important. Grasshopper works on the CPU, and is mostly single-threaded. Ideally, an i5 or i7 equivalent CPU within the past two years is ideal. GPU does not really matter as long as it is a decent one.
 - People
 
 
