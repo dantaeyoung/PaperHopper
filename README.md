@@ -8,8 +8,6 @@ Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
 Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between tool and medium. It is also very much a prototype.
 
-**[Download v0.2 as a zip file.](https://github.com/dantaeyoung/PaperHopper/archive/v0.2.zip)**
-
 ## Setup
 
 ### Hardware
@@ -17,16 +15,14 @@ Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between to
 
 Required hardware:
 - A table with a light-ish surface. The maximum size will depend on the projector throw distance and the webcam angle of view.
-- People
 - Webcam.
   - The more resolution, the better, and also the slower. 1920x1080 at 24fps is ideal. The Logitech Brio is a stellar webcam.
   - The webcam may need some modification to make it into an infrared webcam.
 - Projector. 
   - The more lumens, the better. Having a throw ratio of around 0.5 - 1.2 is necessary to get a wide image with a short distance.
-- A fast computer with good CPU clock speed. 
-  - Grasshopper works on the CPU, and is mostly single-threaded.
-(More details to come)
-
+- A fast computer with very good CPU clock speed. 
+  - This is important. Grasshopper works on the CPU, and is mostly single-threaded. Ideally, an i5 or i7 equivalent CPU within the past two years is ideal. GPU does not really matter as long as it is a decent one.
+- People
 
 
 ### Software setup for Camera-only mode.
@@ -42,37 +38,43 @@ Required hardware:
 ![reactivision.png](PaperHopper/imgs/reactivision.png)
   - Great!
 
-##### Grasshopper/Rhino
+#### Grasshopper/Rhino
 
-- Launch Rhino (6) and Grasshopper.
-- Load `Paperhopper_CameraOnly_TEMPLATE.gh` in Grasshopper.
-  - If Grasshopper warns you about missing plugins, the relevant plugins are in the folder `gh_plugins/`. They are:
-    - [Human](https://www.food4rhino.com/app/human)
-    - [gHowl](https://www.food4rhino.com/app/ghowl)
-    - [Bengesht](https://www.food4rhino.com/app/bengesht)
-    - [Lunchbox](https://www.food4rhino.com/app/lunchbox)
-    - [Telepathy](https://www.food4rhino.com/app/telepathy)
-- Follow the instructions in the Grasshopper definition.
-![CameraOnlyInstructions.PNG](PaperHopper/imgs/CameraOnlyInstructions.PNG)
-  - Especially - make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
-![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
-- You should now have it working! This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
+##### 1. Hardware: 
+ - This assumes your hardware is setup! This means:
+  - A projector facing down onto a white-ish table
+  - A USB webcam (preferably an infrared camera) pointing down to that same table
 
-
-
-### Software setup for Full table mode.
-
- The setup is similar to above. In addition:
-##### Hardware: 
- - Install a projector
-##### Rhino:
+##### 2. Rhino:
  - Open the `Paperhopper_3dm_TEMPLATE.3dm` file in Rhino.
  - In `Display Options`, import the `Paperhopper_Display_Mode.ini` file, which just creates a viewport style called 'PaperHopper'. The background is black, and some other small details are tweaked.
  - Load the Named View `PaperHopper` view.
  - Run `ToggleFloatingViewport` to make sure that a floating viewport exists. 
  - Drag this to your projector and maximize it, effectively using this as a canvas.
-##### Grasshopper:
- - First open the `Paperhopper_1_CALIBRATION.gh` file in Grasshopper. This will help you calibrate the system. Follow the instructions (essentially press the large pink button and move a single fiducial marker around).
+
+##### 3. Calibration:
+ - First open the `Paperhopper_1_CALIBRATION.gh` file in Grasshopper. This will help you calibrate the system. 
+   - Make sure that you don't have other Paperhopper-related definitions open. Reactivision sends data to Grasshopper over the network, and only one process can be listening to that data at a time.
+ - If Grasshopper warns you about missing plugins, the relevant plugins are in the folder `gh_plugins/`. They are:
+   - [Human](https://www.food4rhino.com/app/human)
+   - [gHowl](https://www.food4rhino.com/app/ghowl)
+   - [Bengesht](https://www.food4rhino.com/app/bengesht)
+   - [Lunchbox](https://www.food4rhino.com/app/lunchbox)
+   - [Telepathy](https://www.food4rhino.com/app/telepathy)
+ - Follow the instructions in the Rhino window (essentially press the large pink button and move a single fiducial marker around).
  - When your calibration is done, Grasshopper saves a `Calibration.csv` file locally to the same folder.
- - Close this definition. Now, open `Paperhopper_2_PLAY_TEMPLATE.gh`.
- - You will see the same 'Find Tags based on Tags ID' component as before, but will also be able to see the system recognize the tags and project them onto the table surface.
+ 
+##### 4. Run CoordinateTranslator
+
+  - A python file does the coordinate translation as a separate process. You should have python installed. 
+  - Run `pip install python-osc` to install the pythonosc library.
+  - Run `python CoordinateTranslator.py`.
+  
+##### 5. Play!
+
+ - Close all other definitions. 
+ - Open `Paperhopper_2_PLAY_TEMPLATE.gh`.
+ - It should be working! If it doesn't, delete and undo (undelete) the UDP component.
+ - The basic component to use is the `Find Tags by ID` component.
+![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
+ -This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
