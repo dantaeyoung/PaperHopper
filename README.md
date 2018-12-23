@@ -88,3 +88,9 @@ Required hardware:
  - The basic component to use is the `Find Tags by ID` component.
 ![FindTagsbyID.PNG](PaperHopper/imgs/FindTagsbyID.PNG)
  -This means that you can ask Grasshopper to find a tag by a certain ID, and then when the tag is visible, get its rotation amount, or trigger a Rhino command, et cetera.
+
+## License
+
+This repo is licensed under GNU General Public License v3.0.
+
+Basically: Let's share everything!
