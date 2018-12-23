@@ -1,12 +1,22 @@
 # PaperHopper
 
-PaperHopper is a prototype medium for experimenting with how our environment changes how we design.
+PaperHopper is a medium for prototyping new architectural design tools.
 
 Initially developed with _Metatool_, a class taught at Columbia GSAPP in Fall 2018. Students are asked to brainstorm and create experimental environments that altered their design process.
 
 Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
 Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between tool and medium. It is also very much a prototype.
+
+## Goals / thoughts / motives
+
+Let's imagine that _computing_ and _designing_ is an activity that happens in a medium. 
+
+On a wider scale, this medium is made of objects, computer screens, paper, 3d models, software, discussion, pinups, verbal critiques, markup drawings, emails, social norms, and things that [from a long way off look like flies](https://en.wikipedia.org/wiki/Celestial_Emporium_of_Benevolent_Knowledge).
+
+Architectural design or computational design often happens in the context of computer screens and 3d modeling software. What would it be to knit together another medium that consists of physical objects, social interaction, computational models, and tangible space?
+
+PaperHopper's interests are adjacent to Dynamicland, where they are wonderfully trying to create a building that is a computational medium. PaperHopper is a prototyping medium designed so that students/people can play with a physical table as a computational prototyping medium for creating new architectural design tools.
 
 ## Setup
 
