@@ -8,6 +8,8 @@ Heavily inspired by [Dynamicland](https://dynamicland.org/).
 
 Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between tool and medium. It is also very much a prototype.
 
+**This documentation is in progress.**
+
 ## Goals / thoughts / motives
 
 Let's imagine that _computing_ and _designing_ is an activity that happens in a medium. 
