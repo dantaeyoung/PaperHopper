@@ -34,7 +34,9 @@ Required hardware:
   - The more lumens, the better. Having a throw ratio of around 0.5 - 1.2 is necessary to get a wide image with a short distance.
 - A fast computer with very good CPU clock speed. 
   - This is important. Grasshopper works on the CPU, and is mostly single-threaded. Ideally, an i5 or i7 equivalent CPU within the past two years is ideal. GPU does not really matter as long as it is a decent one.
-- People
+- People.
+
+For more information / a shopping list, see [Hardware.md](Hardware.md).
 
 
 ### Software setup for Camera-only mode.
