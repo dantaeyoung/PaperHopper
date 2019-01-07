@@ -36,7 +36,7 @@ Required hardware:
   - This is important. Grasshopper works on the CPU, and is mostly single-threaded. Ideally, an i5 or i7 equivalent CPU within the past two years is ideal. GPU does not really matter as long as it is a decent one.
 - People.
 
-For more information / a shopping list, see [Hardware.md](Hardware.md).
+For a specific shopping list that worked for me, see this [list of items](https://docs.google.com/spreadsheets/d/1tFv3VUJZiyRCH8n7jS4gtuZnIcmBaqbA_QOup9PwAbg/edit#gid=0).
 
 
 ### Software setup for Camera-only mode.
