@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+from functools import wraps
 from itertools import product
 import json, math
 from pythonosc import dispatcher
@@ -39,6 +41,34 @@ with open('calibration.csv') as json_data:
 tuiostate = {} 
 client = None
 
+
+
+class throttle(object):
+    """
+    Decorator that prevents a function from being called more than once every
+    time period.
+    To create a function that cannot be called more than once a minute:
+        @throttle(minutes=1)
+        def my_fun():
+            pass
+    """
+    def __init__(self, milliseconds=0, seconds=0, minutes=0, hours=0):
+        self.throttle_period = timedelta(
+            milliseconds=milliseconds, seconds=seconds, minutes=minutes, hours=hours
+        )
+        self.time_of_last_call = datetime.min
+
+    def __call__(self, fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            now = datetime.now()
+            time_since_last_call = now - self.time_of_last_call
+
+            if time_since_last_call > self.throttle_period:
+                self.time_of_last_call = now
+                return fn(*args, **kwargs)
+        return wrapper
+
 def tuio2dobj(*args):
     global tuiostate
 #    print(unused_addr)
@@ -48,6 +78,7 @@ def tuio2dobj(*args):
     if(args[1] == 'set'):
         tuiostate[args[3]] = [args[3],args[4],args[5],args[6] / 2 / math.pi]
 
+@throttle(milliseconds=50)
 def convert_and_send_tuiostate(ts):
     global client 
     if client is not None:
