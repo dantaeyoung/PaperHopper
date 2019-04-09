@@ -107,15 +107,29 @@ Basically: Let's share everything!
 
 ## Other notes
 
-#### How the calibration works
+### How the calibration works
 
 There are two different types of coordinates: **camera coordinates** and **screen/projector coordinates**
 
 (In a more sophisticated systems, there might be three: **camera**, **3dworld**, and **projector** coordinates.)
 
-**Camera coordinates** are the coordinate space of the camera. So, if a marker is placed on a table, and when the camera looks at it, it's towards the lower right hand corner of the camera, and lets say that the camera is a 1080p camera (1920x1080px), then maybe the marker is at (1700, 800)px coordinates, from the persepective of the camera.
+**Camera coordinates** are the coordinate space of the camera. So, if a marker is placed on a table, and when the camera looks at it, it's towards the lower right hand corner of the camera, and lets say that the camera is a 720p camera (1280×720px), then maybe the marker is at (1000, 600)px coordinates, from the persepective of the camera.
 
-**Screen/Projector coordinates** is the coordinate space of the projector. If that 
+**Screen/projector coordinates** is the coordinate space of the projector. If the marker is placed on a table, and the projector is a 1080p projector (1920x1080px), then let's say that if the projector projects a dot at (1700, 800), it will hit the marker.
+
+The calibration routine asks the operator to place the marker at four known screen/projector locations that form a quadrilateral. Let's call them points A_proj, B_proj, C_proj, D_proj. When the operator places the marker, the calibration routine and records the marker locations -- let's call the points A_cam, B_cam, C_cam, D_cam. This way, we have four points in physical space that are recorded with both their camera and screen/projector coordinates. 
+
+For example, for a point on the lower-left side of the table, we have it in screen/projector space (A_proj) and in camera space (A_cam).
+
+We then need to do a transformation between camera coordinates and projector coordinates. This transformation is a *colinear perspective transformation*, or a [*homography mapping*](https://en.wikipedia.org/wiki/Homography) from one quadrilateral to another. In general, these transformations work by creating a transform matrix from one quad to another, and then multiplying a point on the first quadrilateral by the matrix to find the second point.
+
+Thus, we can go from camera coordinates to projector coordinates, and vice versa.
+
+This is one such way to perform a colinear perspective transformation in Python:
+https://stackoverflow.com/a/24088499
+
+Another solution is implemented inside `Paperhopper_1_CALIBRATION.gh` and `CoordinateTranslator.py`. `Paperhopper_1_CALIBRATION.gh` performs the calibration and saves the transformation matrix as `calibration.csv`; `CoordinateTranslator.py` then reads this calibration.csv file, loads the transformation matrix, receives messages from Reactivision, and passes them onto `Paperhopper_2_PLAY_TEMPLATE.gh`, etc.
+
 
 ## Footnotes
 
