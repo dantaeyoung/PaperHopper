@@ -4,9 +4,9 @@ PaperHopper is a medium for prototyping new architectural design tools.
 
 ![paperhopper_drawing_example.gif](images/paperhopper_drawing_example.gif)
 
-![paperhopper_glasses.jpg](paperhopper_glasses.jpg)
+![paperhopper_glasses.jpg](images/paperhopper_glasses.jpg)
 
-![furniture_placer.gif](furniture_placer.gif)
+![furniture_placer.gif](images/furniture_placer.gif)
 
 Initially developed with _Metatool_, a class taught at Columbia GSAPP in Fall 2018. Students are asked to brainstorm and create experimental environments that altered their design process.
 
