@@ -14,7 +14,7 @@ Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between to
 
 Let's imagine that _computing_ and _designing_ is an activity that happens in a medium. 
 
-On a wider scale, this medium is made of objects, computer screens, paper, 3d models, software, discussion, pinups, verbal critiques, markup drawings, emails, social norms, and things that [from a long way off look like flies](https://en.wikipedia.org/wiki/Celestial_Emporium_of_Benevolent_Knowledge).
+On a wider scale, this medium is made of objects, computer screens, paper, 3d models, software, discussion, pinups, verbal critiques, markup drawings, emails, social norms, and things that [from a long way off look like flies](https://en.wikipedia.org/wiki/Celestial_Emporium_of_Benevolent_Knowledge).[1] 
 
 Architectural design or computational design often happens in the context of computer screens and 3d modeling software. What would it be to knit together another medium that consists of physical objects, social interaction, computational models, and tangible space?
 
@@ -98,3 +98,8 @@ For a specific shopping list that worked for me, see this [list of items](https:
 This repo is licensed under GNU General Public License v3.0.
 
 Basically: Let's share everything!
+
+
+## Footnotes
+
+[1] I will note that I feel somewhat uncomfortable about this Borges reference, because it partially relies/amplifies the 'inscrutable asian' stereotype; is it celebratory or exoticizing a taxonomic order that has a confusing, inscrutable logic? Both.
