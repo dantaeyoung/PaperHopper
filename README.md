@@ -2,6 +2,12 @@
 
 PaperHopper is a medium for prototyping new architectural design tools.
 
+![paperhopper_drawing_example.gif](images/paperhopper_drawing_example.gif)
+
+![paperhopper_glasses.jpg](paperhopper_glasses.jpg)
+
+![furniture_placer.gif](furniture_placer.gif)
+
 Initially developed with _Metatool_, a class taught at Columbia GSAPP in Fall 2018. Students are asked to brainstorm and create experimental environments that altered their design process.
 
 Heavily inspired by [Dynamicland](https://dynamicland.org/).
@@ -49,7 +55,7 @@ For a specific shopping list that worked for me, see this [list of items](https:
     - (This is the same code from `http://reactivision.sourceforge.net/`, just with some settings pre-tweaked for convenience.)
   - If Windows alerts you that reactivision wants to communicate over the network, let it do so.
   - Print out a sheet of fiducial markers from (http://reactivision.sourceforge.net/data/fiducials.pdf), or load it on your phone, and test to see if Reactivision recognizes it. You should see small green numbers in the middle of each markers if so.
-![reactivision.png](PaperHopper/imgs/reactivision.PNG)
+![reactivision.png](images/reactivision.PNG)
   - Great!
 
 #### Grasshopper/Rhino
