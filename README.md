@@ -105,6 +105,17 @@ This repo is licensed under GNU General Public License v3.0.
 
 Basically: Let's share everything!
 
+## Other notes
+
+#### How the calibration works
+
+There are two different types of coordinates: **camera coordinates** and **screen/projector coordinates**
+
+(In a more sophisticated systems, there might be three: **camera**, **3dworld**, and **projector** coordinates.)
+
+**Camera coordinates** are the coordinate space of the camera. So, if a marker is placed on a table, and when the camera looks at it, it's towards the lower right hand corner of the camera, and lets say that the camera is a 1080p camera (1920x1080px), then maybe the marker is at (1700, 800)px coordinates, from the persepective of the camera.
+
+**Screen/Projector coordinates** is the coordinate space of the projector. If that 
 
 ## Footnotes
 
