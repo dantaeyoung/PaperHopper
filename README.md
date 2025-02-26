@@ -20,7 +20,7 @@ Developed to be used with Rhino/Grasshopper, PaperHopper is somewhere between to
 
 Let's imagine that _computing_ and _designing_ is an activity that happens in a medium. 
 
-On a wider scale, this medium is made of objects, computer screens, paper, 3d models, software, discussion, pinups, verbal critiques, markup drawings, emails, social norms, and things that [from a long way off look like flies](https://en.wikipedia.org/wiki/Celestial_Emporium_of_Benevolent_Knowledge).[1] 
+On a wider scale, this medium is made of objects, computer screens, paper, 3d models, software, discussion, pinups, verbal critiques, markup drawings, emails, social norms, and things that [from a long way off look like flies](https://en.wikipedia.org/wiki/Celestial_Emporium_of_Benevolent_Knowledge).
 
 Architectural design or computational design often happens in the context of computer screens and 3d modeling software. What would it be to knit together another medium that consists of physical objects, social interaction, computational models, and tangible space?
 
@@ -131,6 +131,3 @@ https://stackoverflow.com/a/24088499
 Another solution is implemented inside `Paperhopper_1_CALIBRATION.gh` and `CoordinateTranslator.py`. `Paperhopper_1_CALIBRATION.gh` performs the calibration and saves the transformation matrix as `calibration.csv`; `CoordinateTranslator.py` then reads this calibration.csv file, loads the transformation matrix, receives messages from Reactivision, and passes them onto `Paperhopper_2_PLAY_TEMPLATE.gh`, etc.
 
 
-## Footnotes
-
-[1] I will note that I feel somewhat uncomfortable about this Borges reference, because it partially relies/amplifies the 'inscrutable asian' stereotype; is it celebratory or exoticizing a taxonomic order that has a confusing, inscrutable logic? Both.
